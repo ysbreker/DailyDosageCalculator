@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Daily Dosage Calculator</title>
+		<link rel="stylesheet" href="css/ddc.css"/>
+	</head>
+	<body>
+		<header>
+			<h1>Daily Dosage Calculator</h1>
+			<p>This tool can be used to calculate the daily dosage of <a href="http://en.wikipedia.org/wiki/Acenocoumarol">acenocoumarol</a> you have to take to keep your <a href="http://en.wikipedia.org/wiki/International_normalized_ratio">INR</a> in the correct range.</p>
+		</header>
+		<form>
+			<ol>
+				<li>
+					<label for="previousINR">Previous INR value</label>
+					<input type="number" id="previousINR" name="previousINR" required/>
+				</li>
+				<li>
+					<label for="currentINR">Current INR value</label>
+					<input type="number" id="currentINR" name="currentINR" required/>
+				</li>
+				<li>
+					<label for="currentStep">Current step</label>
+					<input type="number" id="currentStep" name="currentStep" required/>
+					<ul>
+						<li><input type="radio" id="stepTypeLo" name="stepType" value="L" required/><label for="stepTypeLo">Low</label></li>
+						<li><input type="radio" id="stepTypeHi" name="stepType" value="H" required/><label for="stepTypeHi">High</label></li>
+					</ul>
+				</li>
+				<li>
+					<input type="submit" value="Calculate new Schedule"/>
+				</li>
+			</ol>
+		</form>
+		<footer>
+			<p>Use this tool at your own risk! If you use this and it calculates the incorrect dosage I am not responsible!</p>
+		</footer>
+	</body>
+</html>
